@@ -27,6 +27,11 @@
                 src="{{ project.image }}"
                 alt="{{ project.alt }}"
               />
+              {% if project.additional_images %}
+                {% for img in project.additional_images %}
+                  <img class="img-fluid d-block mx-auto" src="{{ img }}" alt="Additional project image">
+                {% endfor %}
+              {% endif %}
               <p>{{ project.content }}</p>
               <button
                 class="btn btn-primary"
